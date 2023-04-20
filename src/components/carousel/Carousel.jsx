@@ -14,7 +14,7 @@ import CircleRating from "../circleRating/CircleRating";
 import Genres from "../genres/Genres";
 import "./style.scss";
 
-function Carousel({ data, loading }) {
+function Carousel({ data, loading, endpoint }) {
 
     const carouselContainer = useRef();
     const { url } = useSelector((state) => state.home);
@@ -66,7 +66,7 @@ function Carousel({ data, loading }) {
                             const posterUrl = item.poster_path ? url.poster + item.poster_path : PosterFallback;
                             return (
                                 <div className="carouselItem" 
-                                    onClick={() => navigate(`/${item.media_type}/${item.id}`)} 
+                                    onClick={() => navigate(`/${item.media_type || endpoint}/${item.id}`)} 
                                     key={item.id}
                                 >
                                     <div className="posterBlock">
