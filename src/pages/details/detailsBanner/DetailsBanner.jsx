@@ -12,7 +12,7 @@ import CircleRating from "../../../components/circleRating/CircleRating";
 import Img from "../../../components/lazyLoadImage/Img.jsx";
 import PosterFallback from "../../../assets/no-poster.png";
 import VideoPopup from "../../../components/videoPopup/VideoPopup";
-import { Playbtn } from "../Playbtn";
+import { PlayIcon } from "../Playbtn";
 
 const DetailsBanner = ({ video, crew }) => {
 
@@ -81,7 +81,7 @@ const DetailsBanner = ({ video, crew }) => {
                                                 setShow(true)
                                                 setVideoId(video.key)
                                             }}>
-                                                <Playbtn />
+                                                <PlayIcon />
                                                 <span className="text">
                                                     Watch Trailer
                                                 </span>
