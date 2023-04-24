@@ -88,6 +88,11 @@
         }
     }
 
+    .searchButton {
+        border: none;
+        background: none;
+    }
+
     &.mobileView {
         background: var(--black3);
 

@@ -3,6 +3,7 @@ import { HiOutlineSearch } from "react-icons/hi";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
+import { BiSearchAlt } from 'react-icons/bi';
 
 import "./style.scss";
 
@@ -51,10 +52,16 @@ const Header = () => {
     }
   };
 
+  const searchButtonHandler = () => {
+    if (query.length > 0) {
+      navigate(`/search/${query}`);
+      setShowSearch(false);
+    }
+  }
+
   const openSearch = () => {
     setMobileMenu(false);
     setShowSearch(true);
-    // console.log("CLICKED");
   };
 
   const openMobileMenu = () => {
@@ -109,6 +116,9 @@ const Header = () => {
                 onKeyUp={searchQueryHandler}
               />
               <VscChromeClose onClick={() => setShowSearch(false)} />
+              <button className="searchButton" onClick={searchButtonHandler}>
+                <BiSearchAlt />
+              </button>
             </div>
           </ContentWrapper>
         </div>
