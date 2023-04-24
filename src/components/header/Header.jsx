@@ -48,6 +48,7 @@ const Header = () => {
       navigate(`/search/${query}`);
       setTimeout(() => {
         setShowSearch(false);
+        setQuery("");
       }, 1000);
     }
   };
@@ -56,6 +57,7 @@ const Header = () => {
     if (query.length > 0) {
       navigate(`/search/${query}`);
       setShowSearch(false);
+      setQuery("");
     }
   }
 

@@ -27,12 +27,14 @@ function HeroBanner() {
   const searchQueryHandler = (event) => {
     if (event.key === "Enter" && query.length > 0) {
       navigate(`/search/${query}`);
+      setQuery("");
     }
   }
 
   const searchButtonHandler = () => {
     if (query.length > 0) {
       navigate(`/search/${query}`);
+      setQuery("");
     }
   }
 
