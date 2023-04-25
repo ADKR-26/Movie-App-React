@@ -65,6 +65,7 @@ function Carousel({ data, loading, endpoint, title }) {
                     >
                         {data?.map((item) => {
                             const posterUrl = item.poster_path ? url.poster + item.poster_path : PosterFallback;
+                            const releaseDate = item.release_date;
                             return (
                                 <div className="carouselItem" 
                                     onClick={() => navigate(`/${item.media_type || endpoint}/${item.id}`)} 
@@ -80,7 +81,7 @@ function Carousel({ data, loading, endpoint, title }) {
                                             {item.title || item.name}
                                         </span>
                                         <span className="date">
-                                            {dayjs(item.release_Date).format("MMM D, YYYY")}
+                                            {dayjs(releaseDate).format("MMM D, YYYY")}
                                         </span>
                                     </div>
                                 </div>
