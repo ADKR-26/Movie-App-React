@@ -77,7 +77,7 @@ const DetailsBanner = ({ video, crew }) => {
                                             <CircleRating
                                                 rating={data.vote_average.toFixed(1)}
                                             />
-                                            <div className="playbtn" onClick={() => { 
+                                            <div className="playbtn" onClick={() => {
                                                 setShow(true)
                                                 setVideoId(video.key)
                                             }}>
@@ -115,6 +115,17 @@ const DetailsBanner = ({ video, crew }) => {
                                                     </span>
                                                     <span className="text">
                                                         {dayjs(data.release_date).format("MMM D, YYYY")}
+                                                    </span>
+                                                </div>
+                                            )}
+
+                                            {data.first_air_date && (
+                                                <div className="infoItem">
+                                                    <span className="text bold">
+                                                        First Aired:{" "}
+                                                    </span>
+                                                    <span className="text">
+                                                        {dayjs(data.first_air_date).format("MMM D, YYYY")}
                                                     </span>
                                                 </div>
                                             )}
@@ -180,7 +191,7 @@ const DetailsBanner = ({ video, crew }) => {
 
                                     </div>
                                 </div>
-                                <VideoPopup 
+                                <VideoPopup
                                     show={show}
                                     setShow={setShow}
                                     videoId={videoId}

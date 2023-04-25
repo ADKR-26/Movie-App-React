@@ -65,7 +65,7 @@ function Carousel({ data, loading, endpoint, title }) {
                     >
                         {data?.map((item) => {
                             const posterUrl = item.poster_path ? url.poster + item.poster_path : PosterFallback;
-                            const releaseDate = item.release_date;
+                            const releaseDate = item.release_date || item.first_air_date;
                             return (
                                 <div className="carouselItem" 
                                     onClick={() => navigate(`/${item.media_type || endpoint}/${item.id}`)} 
