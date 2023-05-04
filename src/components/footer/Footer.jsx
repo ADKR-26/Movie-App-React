@@ -10,6 +10,7 @@ import {
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 
 import "./style.scss";
+import VisitCount from "../VisitCount";
 
 const Footer = () => {
     return (
@@ -44,6 +45,7 @@ const Footer = () => {
                         <FaLinkedin />
                     </span>
                 </div>
+                <VisitCount />
             </ContentWrapper>
         </footer>
     );
