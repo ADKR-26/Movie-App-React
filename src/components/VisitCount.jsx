@@ -7,7 +7,7 @@ const VisitCount = () => {
 
     const postData = async () => {
         try {
-            const response = await axios.post('https://counter-api.onrender.com/counter-api', {
+            const response = await axios.post('https://counter-api.onrender.com/counter', {
                 name: 'movie-app',
             });
             setVisitData(response.data.newData.visits);
