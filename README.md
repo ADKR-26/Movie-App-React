@@ -1,6 +1,6 @@
 # Movie-App-React
-It is a web-based application that enables users to search for movies and TV shows while providing access to relevant information such as ratings, cast details, trailers, and more. With this application, users can easily explore a vast collection of movies and TV shows and make informed decisions on what to watch.
-<b>Homepage</b>
+It is a web-based application that enables users to search for movies and TV shows while providing access to relevant information such as ratings, cast details, trailers, and more. With this application, users can easily explore a vast collection of movies and TV shows and make informed decisions on what to watch.</br>
+<b>Homepage</b></br>
 ![image](https://user-images.githubusercontent.com/81681210/235868174-a589ce76-c2a5-4291-b1aa-466d4235c15c.png)
 
 <b>Movie Details</b>
